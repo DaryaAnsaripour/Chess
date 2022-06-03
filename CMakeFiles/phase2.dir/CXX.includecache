@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/darya/Documents/AP/project/phase2/headers/Console.h
+bits/stdc++.h
+-
+
+/home/darya/Documents/AP/project/phase2/headers/chessBoard.h
+Console.h
+/home/darya/Documents/AP/project/phase2/headers/Console.h
+pieces.h
+/home/darya/Documents/AP/project/phase2/headers/pieces.h
+
+/home/darya/Documents/AP/project/phase2/headers/pieces.h
+Console.h
+/home/darya/Documents/AP/project/phase2/headers/Console.h
+
+/home/darya/Documents/AP/project/phase2/src/chessBoard.cpp
+../headers/chessBoard.h
+/home/darya/Documents/AP/project/phase2/headers/chessBoard.h
+
+/home/darya/Documents/AP/project/phase2/src/main.cpp
+../headers/chessBoard.h
+/home/darya/Documents/AP/project/phase2/headers/chessBoard.h
+
+/home/darya/Documents/AP/project/phase2/src/pieces.cpp
+../headers/pieces.h
+/home/darya/Documents/AP/project/phase2/headers/pieces.h
+

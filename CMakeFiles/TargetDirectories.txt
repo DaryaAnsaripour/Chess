@@ -1,0 +1,3 @@
+/home/darya/Documents/AP/project/phase2/CMakeFiles/rebuild_cache.dir
+/home/darya/Documents/AP/project/phase2/CMakeFiles/edit_cache.dir
+/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir

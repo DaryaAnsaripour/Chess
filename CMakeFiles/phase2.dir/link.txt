@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/phase2.dir/src/main.cpp.o CMakeFiles/phase2.dir/src/pieces.cpp.o CMakeFiles/phase2.dir/src/chessBoard.cpp.o  -o phase2 
