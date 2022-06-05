@@ -4,9 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/darya/Documents/AP/project/phase2/src/bishop.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/bishop.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/chessBoard.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/chessBoard.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/king.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/king.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/knight.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/knight.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/main.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/main.cpp.o"
-  "/home/darya/Documents/AP/project/phase2/src/pieces.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/pieces.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/pawn.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/pawn.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/piece.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/piece.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/queen.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/queen.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/rook.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/rook.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

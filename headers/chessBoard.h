@@ -2,7 +2,12 @@
 #define _chessBoard_H
 
 #include "Console.h"
-#include "pieces.h"
+#include "king.h"
+#include "queen.h"
+#include "knight.h"
+#include "bishop.h"
+#include "rook.h"
+#include "pawn.h"
 
 class Chess
 {

@@ -123,6 +123,33 @@ phase2/fast:
 	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/build
 .PHONY : phase2/fast
 
+src/bishop.o: src/bishop.cpp.o
+
+.PHONY : src/bishop.o
+
+# target to build an object file
+src/bishop.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/bishop.cpp.o
+.PHONY : src/bishop.cpp.o
+
+src/bishop.i: src/bishop.cpp.i
+
+.PHONY : src/bishop.i
+
+# target to preprocess a source file
+src/bishop.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/bishop.cpp.i
+.PHONY : src/bishop.cpp.i
+
+src/bishop.s: src/bishop.cpp.s
+
+.PHONY : src/bishop.s
+
+# target to generate assembly for a file
+src/bishop.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/bishop.cpp.s
+.PHONY : src/bishop.cpp.s
+
 src/chessBoard.o: src/chessBoard.cpp.o
 
 .PHONY : src/chessBoard.o
@@ -149,6 +176,60 @@ src/chessBoard.s: src/chessBoard.cpp.s
 src/chessBoard.cpp.s:
 	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/chessBoard.cpp.s
 .PHONY : src/chessBoard.cpp.s
+
+src/king.o: src/king.cpp.o
+
+.PHONY : src/king.o
+
+# target to build an object file
+src/king.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/king.cpp.o
+.PHONY : src/king.cpp.o
+
+src/king.i: src/king.cpp.i
+
+.PHONY : src/king.i
+
+# target to preprocess a source file
+src/king.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/king.cpp.i
+.PHONY : src/king.cpp.i
+
+src/king.s: src/king.cpp.s
+
+.PHONY : src/king.s
+
+# target to generate assembly for a file
+src/king.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/king.cpp.s
+.PHONY : src/king.cpp.s
+
+src/knight.o: src/knight.cpp.o
+
+.PHONY : src/knight.o
+
+# target to build an object file
+src/knight.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/knight.cpp.o
+.PHONY : src/knight.cpp.o
+
+src/knight.i: src/knight.cpp.i
+
+.PHONY : src/knight.i
+
+# target to preprocess a source file
+src/knight.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/knight.cpp.i
+.PHONY : src/knight.cpp.i
+
+src/knight.s: src/knight.cpp.s
+
+.PHONY : src/knight.s
+
+# target to generate assembly for a file
+src/knight.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/knight.cpp.s
+.PHONY : src/knight.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -177,32 +258,113 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/pieces.o: src/pieces.cpp.o
+src/pawn.o: src/pawn.cpp.o
 
-.PHONY : src/pieces.o
+.PHONY : src/pawn.o
 
 # target to build an object file
-src/pieces.cpp.o:
-	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pieces.cpp.o
-.PHONY : src/pieces.cpp.o
+src/pawn.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pawn.cpp.o
+.PHONY : src/pawn.cpp.o
 
-src/pieces.i: src/pieces.cpp.i
+src/pawn.i: src/pawn.cpp.i
 
-.PHONY : src/pieces.i
+.PHONY : src/pawn.i
 
 # target to preprocess a source file
-src/pieces.cpp.i:
-	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pieces.cpp.i
-.PHONY : src/pieces.cpp.i
+src/pawn.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pawn.cpp.i
+.PHONY : src/pawn.cpp.i
 
-src/pieces.s: src/pieces.cpp.s
+src/pawn.s: src/pawn.cpp.s
 
-.PHONY : src/pieces.s
+.PHONY : src/pawn.s
 
 # target to generate assembly for a file
-src/pieces.cpp.s:
-	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pieces.cpp.s
-.PHONY : src/pieces.cpp.s
+src/pawn.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/pawn.cpp.s
+.PHONY : src/pawn.cpp.s
+
+src/piece.o: src/piece.cpp.o
+
+.PHONY : src/piece.o
+
+# target to build an object file
+src/piece.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/piece.cpp.o
+.PHONY : src/piece.cpp.o
+
+src/piece.i: src/piece.cpp.i
+
+.PHONY : src/piece.i
+
+# target to preprocess a source file
+src/piece.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/piece.cpp.i
+.PHONY : src/piece.cpp.i
+
+src/piece.s: src/piece.cpp.s
+
+.PHONY : src/piece.s
+
+# target to generate assembly for a file
+src/piece.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/piece.cpp.s
+.PHONY : src/piece.cpp.s
+
+src/queen.o: src/queen.cpp.o
+
+.PHONY : src/queen.o
+
+# target to build an object file
+src/queen.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/queen.cpp.o
+.PHONY : src/queen.cpp.o
+
+src/queen.i: src/queen.cpp.i
+
+.PHONY : src/queen.i
+
+# target to preprocess a source file
+src/queen.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/queen.cpp.i
+.PHONY : src/queen.cpp.i
+
+src/queen.s: src/queen.cpp.s
+
+.PHONY : src/queen.s
+
+# target to generate assembly for a file
+src/queen.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/queen.cpp.s
+.PHONY : src/queen.cpp.s
+
+src/rook.o: src/rook.cpp.o
+
+.PHONY : src/rook.o
+
+# target to build an object file
+src/rook.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/rook.cpp.o
+.PHONY : src/rook.cpp.o
+
+src/rook.i: src/rook.cpp.i
+
+.PHONY : src/rook.i
+
+# target to preprocess a source file
+src/rook.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/rook.cpp.i
+.PHONY : src/rook.cpp.i
+
+src/rook.s: src/rook.cpp.s
+
+.PHONY : src/rook.s
+
+# target to generate assembly for a file
+src/rook.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/rook.cpp.s
+.PHONY : src/rook.cpp.s
 
 # Help Target
 help:
@@ -213,15 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... phase2"
+	@echo "... src/bishop.o"
+	@echo "... src/bishop.i"
+	@echo "... src/bishop.s"
 	@echo "... src/chessBoard.o"
 	@echo "... src/chessBoard.i"
 	@echo "... src/chessBoard.s"
+	@echo "... src/king.o"
+	@echo "... src/king.i"
+	@echo "... src/king.s"
+	@echo "... src/knight.o"
+	@echo "... src/knight.i"
+	@echo "... src/knight.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/pieces.o"
-	@echo "... src/pieces.i"
-	@echo "... src/pieces.s"
+	@echo "... src/pawn.o"
+	@echo "... src/pawn.i"
+	@echo "... src/pawn.s"
+	@echo "... src/piece.o"
+	@echo "... src/piece.i"
+	@echo "... src/piece.s"
+	@echo "... src/queen.o"
+	@echo "... src/queen.i"
+	@echo "... src/queen.s"
+	@echo "... src/rook.o"
+	@echo "... src/rook.i"
+	@echo "... src/rook.s"
 .PHONY : help
 
 

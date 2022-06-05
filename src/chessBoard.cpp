@@ -472,8 +472,6 @@ void Chess::default_initiator()
     board[1][7]=new Knight(BLACK);board[6][7]=new Knight(BLACK);
     board[2][0]=new Bishop(WHITE);board[5][0]=new Bishop(WHITE);
     board[2][7]=new Bishop(BLACK);board[5][7]=new Bishop(BLACK);
-    board[3][0]=new Queen(WHITE);
-    board[3][7]=new Queen(BLACK);
-    board[4][0]=new King(WHITE);
-    board[4][7]=new King(BLACK);
+    board[3][0]=new Queen(WHITE);board[3][7]=new Queen(BLACK);
+    board[4][0]=new King(WHITE);board[4][7]=new King(BLACK);
 }

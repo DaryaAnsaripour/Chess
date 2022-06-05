@@ -7,8 +7,15 @@ set(SRC_DIRECTORY src)
 set(INCLUDE_DIRECTORY headers)
 
 set(SOURCES
-    ${SRC_DIRECTORY}/pieces.cpp
+    ${SRC_DIRECTORY}/piece.cpp
     ${SRC_DIRECTORY}/chessBoard.cpp
+    ${SRC_DIRECTORY}/king.cpp
+    ${SRC_DIRECTORY}/queen.cpp
+    ${SRC_DIRECTORY}/knight.cpp
+    ${SRC_DIRECTORY}/bishop.cpp
+    ${SRC_DIRECTORY}/rook.cpp
+    ${SRC_DIRECTORY}/pawn.cpp
+
 )
 
 include_directories(${INCLUDE_DIRECTORY})
