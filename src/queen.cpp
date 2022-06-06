@@ -1,2 +1,2 @@
 #include "../headers/queen.h"
-Queen:: Queen(Color _color){color=_color;name=QUEEN;}
+Queen:: Queen(Colour _colour){colour=_colour;name=QUEEN;}

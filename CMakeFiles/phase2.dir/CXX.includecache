@@ -9,10 +9,16 @@
 /home/darya/Documents/AP/project/phase2/headers/Console.h
 bits/stdc++.h
 -
+SFML/Graphics.hpp
+-
 
 /home/darya/Documents/AP/project/phase2/headers/bishop.h
 piece.h
 /home/darya/Documents/AP/project/phase2/headers/piece.h
+
+/home/darya/Documents/AP/project/phase2/headers/cell.h
+Console.h
+/home/darya/Documents/AP/project/phase2/headers/Console.h
 
 /home/darya/Documents/AP/project/phase2/headers/chessBoard.h
 Console.h
@@ -29,6 +35,16 @@ rook.h
 /home/darya/Documents/AP/project/phase2/headers/rook.h
 pawn.h
 /home/darya/Documents/AP/project/phase2/headers/pawn.h
+cell.h
+/home/darya/Documents/AP/project/phase2/headers/cell.h
+helper.h
+/home/darya/Documents/AP/project/phase2/headers/helper.h
+
+/home/darya/Documents/AP/project/phase2/headers/helper.h
+Console.h
+/home/darya/Documents/AP/project/phase2/headers/Console.h
+piece.h
+/home/darya/Documents/AP/project/phase2/headers/piece.h
 
 /home/darya/Documents/AP/project/phase2/headers/king.h
 piece.h
@@ -45,6 +61,8 @@ piece.h
 /home/darya/Documents/AP/project/phase2/headers/piece.h
 Console.h
 /home/darya/Documents/AP/project/phase2/headers/Console.h
+helper.h
+/home/darya/Documents/AP/project/phase2/headers/helper.h
 
 /home/darya/Documents/AP/project/phase2/headers/queen.h
 piece.h
@@ -53,40 +71,8 @@ piece.h
 /home/darya/Documents/AP/project/phase2/headers/rook.h
 piece.h
 /home/darya/Documents/AP/project/phase2/headers/piece.h
-
-/home/darya/Documents/AP/project/phase2/src/bishop.cpp
-../headers/bishop.h
-/home/darya/Documents/AP/project/phase2/headers/bishop.h
 
 /home/darya/Documents/AP/project/phase2/src/chessBoard.cpp
 ../headers/chessBoard.h
 /home/darya/Documents/AP/project/phase2/headers/chessBoard.h
-
-/home/darya/Documents/AP/project/phase2/src/king.cpp
-../headers/king.h
-/home/darya/Documents/AP/project/phase2/headers/king.h
-
-/home/darya/Documents/AP/project/phase2/src/knight.cpp
-../headers/knight.h
-/home/darya/Documents/AP/project/phase2/headers/knight.h
-
-/home/darya/Documents/AP/project/phase2/src/main.cpp
-../headers/chessBoard.h
-/home/darya/Documents/AP/project/phase2/headers/chessBoard.h
-
-/home/darya/Documents/AP/project/phase2/src/pawn.cpp
-../headers/pawn.h
-/home/darya/Documents/AP/project/phase2/headers/pawn.h
-
-/home/darya/Documents/AP/project/phase2/src/piece.cpp
-../headers/piece.h
-/home/darya/Documents/AP/project/phase2/headers/piece.h
-
-/home/darya/Documents/AP/project/phase2/src/queen.cpp
-../headers/queen.h
-/home/darya/Documents/AP/project/phase2/headers/queen.h
-
-/home/darya/Documents/AP/project/phase2/src/rook.cpp
-../headers/rook.h
-/home/darya/Documents/AP/project/phase2/headers/rook.h
 

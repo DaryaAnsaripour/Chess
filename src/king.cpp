@@ -1,2 +1,2 @@
 #include "../headers/king.h"
-King:: King(Color _color){color=_color;name=KING;}
+King:: King(Colour _colour){colour=_colour;name=KING;}

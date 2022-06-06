@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/darya/Documents/AP/project/phase2/src/bishop.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/bishop.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/chessBoard.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/chessBoard.cpp.o"
+  "/home/darya/Documents/AP/project/phase2/src/helper.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/helper.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/king.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/king.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/knight.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/knight.cpp.o"
   "/home/darya/Documents/AP/project/phase2/src/main.cpp" "/home/darya/Documents/AP/project/phase2/CMakeFiles/phase2.dir/src/main.cpp.o"

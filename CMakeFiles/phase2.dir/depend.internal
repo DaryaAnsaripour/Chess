@@ -4,12 +4,15 @@
 CMakeFiles/phase2.dir/src/bishop.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
  /home/darya/Documents/AP/project/phase2/headers/bishop.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/src/bishop.cpp
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
  /home/darya/Documents/AP/project/phase2/headers/bishop.h
+ /home/darya/Documents/AP/project/phase2/headers/cell.h
  /home/darya/Documents/AP/project/phase2/headers/chessBoard.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/king.h
  /home/darya/Documents/AP/project/phase2/headers/knight.h
  /home/darya/Documents/AP/project/phase2/headers/pawn.h
@@ -17,20 +20,29 @@ CMakeFiles/phase2.dir/src/chessBoard.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/queen.h
  /home/darya/Documents/AP/project/phase2/headers/rook.h
  /home/darya/Documents/AP/project/phase2/src/chessBoard.cpp
+CMakeFiles/phase2.dir/src/helper.cpp.o
+ /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
+ /home/darya/Documents/AP/project/phase2/headers/piece.h
+ /home/darya/Documents/AP/project/phase2/src/helper.cpp
 CMakeFiles/phase2.dir/src/king.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/king.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/src/king.cpp
 CMakeFiles/phase2.dir/src/knight.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/knight.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/src/knight.cpp
 CMakeFiles/phase2.dir/src/main.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
  /home/darya/Documents/AP/project/phase2/headers/bishop.h
+ /home/darya/Documents/AP/project/phase2/headers/cell.h
  /home/darya/Documents/AP/project/phase2/headers/chessBoard.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/king.h
  /home/darya/Documents/AP/project/phase2/headers/knight.h
  /home/darya/Documents/AP/project/phase2/headers/pawn.h
@@ -40,20 +52,24 @@ CMakeFiles/phase2.dir/src/main.cpp.o
  /home/darya/Documents/AP/project/phase2/src/main.cpp
 CMakeFiles/phase2.dir/src/pawn.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/pawn.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/src/pawn.cpp
 CMakeFiles/phase2.dir/src/piece.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/src/piece.cpp
 CMakeFiles/phase2.dir/src/queen.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/headers/queen.h
  /home/darya/Documents/AP/project/phase2/src/queen.cpp
 CMakeFiles/phase2.dir/src/rook.cpp.o
  /home/darya/Documents/AP/project/phase2/headers/Console.h
+ /home/darya/Documents/AP/project/phase2/headers/helper.h
  /home/darya/Documents/AP/project/phase2/headers/piece.h
  /home/darya/Documents/AP/project/phase2/headers/rook.h
  /home/darya/Documents/AP/project/phase2/src/rook.cpp

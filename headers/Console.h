@@ -1,6 +1,7 @@
 #pragma once
 
 #include <bits/stdc++.h>
+#include <SFML/Graphics.hpp>
 using namespace std;
 #define EIGHT 8
 #define PAWN "pawn"
@@ -9,8 +10,9 @@ using namespace std;
 #define BISHOP "bishop"
 #define QUEEN "queen" 
 #define KING "king"
-enum Color{WHITE,BLACK};
+enum Colour{WHITE,BLACK};
 enum Position{MATE,DEFENCE};
-#define opposite(color) color==WHITE?BLACK:WHITE
+enum CellStatus{EMPTY,OCCUPIED};
+#define opposite(colour) colour==WHITE?BLACK:WHITE
 typedef pair<int,int> Location;
 typedef pair<int,int> Direction;

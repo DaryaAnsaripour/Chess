@@ -7,7 +7,9 @@ class Pawn:public Piece
 {
 private:
 public:
-    Pawn(Color);
+    Pawn(Colour);
+    // sf::Sprite sprite;
+    void load_texture();
 };
 
 #endif

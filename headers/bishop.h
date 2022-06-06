@@ -7,7 +7,9 @@ class Bishop:public Piece
 {
 private:
 public:
-    Bishop(Color);
+    Bishop(Colour);
+    // sf::Sprite sprite;
+    void load_texture();
 };
 
 #endif

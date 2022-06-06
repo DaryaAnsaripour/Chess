@@ -7,7 +7,9 @@ class Rook:public Piece
 {
 private:
 public:
-    Rook(Color);   
+    Rook(Colour);
+    // sf::Sprite sprite;
+    void load_texture();  
 };
 
 #endif

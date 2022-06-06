@@ -1,2 +1,2 @@
 #include "../headers/knight.h"
-Knight:: Knight(Color _color){color=_color;name=KNIGHT;}
+Knight:: Knight(Colour _colour){colour=_colour;name=KNIGHT;}

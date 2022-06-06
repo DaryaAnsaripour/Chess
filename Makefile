@@ -177,6 +177,33 @@ src/chessBoard.cpp.s:
 	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/chessBoard.cpp.s
 .PHONY : src/chessBoard.cpp.s
 
+src/helper.o: src/helper.cpp.o
+
+.PHONY : src/helper.o
+
+# target to build an object file
+src/helper.cpp.o:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/helper.cpp.o
+.PHONY : src/helper.cpp.o
+
+src/helper.i: src/helper.cpp.i
+
+.PHONY : src/helper.i
+
+# target to preprocess a source file
+src/helper.cpp.i:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/helper.cpp.i
+.PHONY : src/helper.cpp.i
+
+src/helper.s: src/helper.cpp.s
+
+.PHONY : src/helper.s
+
+# target to generate assembly for a file
+src/helper.cpp.s:
+	$(MAKE) -f CMakeFiles/phase2.dir/build.make CMakeFiles/phase2.dir/src/helper.cpp.s
+.PHONY : src/helper.cpp.s
+
 src/king.o: src/king.cpp.o
 
 .PHONY : src/king.o
@@ -381,6 +408,9 @@ help:
 	@echo "... src/chessBoard.o"
 	@echo "... src/chessBoard.i"
 	@echo "... src/chessBoard.s"
+	@echo "... src/helper.o"
+	@echo "... src/helper.i"
+	@echo "... src/helper.s"
 	@echo "... src/king.o"
 	@echo "... src/king.i"
 	@echo "... src/king.s"

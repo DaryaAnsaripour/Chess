@@ -2,14 +2,15 @@
 #define _piece_H
 
 #include "Console.h"
+#include "helper.h"
 
 class Piece
 {
 protected:
     string name;
-    Color color;
+    Colour colour;
 public:
-    Color get_color();
+    Colour get_colour();
     string get_name();
 };
 
@@ -21,5 +22,7 @@ struct Action
     Piece *removed;
     Action(Location,Location,Piece* removed=NULL);
 };
+
+
 
 #endif

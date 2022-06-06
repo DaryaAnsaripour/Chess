@@ -1,2 +1,2 @@
 #include "../headers/rook.h"
-Rook:: Rook(Color _color){color=_color;name=ROOK;}
+Rook:: Rook(Colour _colour){colour=_colour;name=ROOK;}

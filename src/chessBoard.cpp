@@ -1,25 +1,136 @@
 #include "../headers/chessBoard.h"
 
-Chess::Chess() : board(vector<vector<Piece *>>(EIGHT, vector<Piece *>(EIGHT, NULL)))
+Chess::Chess(sf::RenderWindow* _window) : window(_window), board(vector<vector<Piece *>>(EIGHT, vector<Piece *>(EIGHT, NULL)))
 {
-    string order;cin>>order;
-    turn=order[0]=='B'?BLACK:WHITE;
-    if(order[0]=='B')
-        turn=BLACK;
-    else if(order[0]=='W')
-        turn=WHITE;
-    else throw "ERROR IN READING COLOR";
-    Position p;
-    if(order[1]=='M')
-        p=MATE;
-    else if(order[1]=='D')
-        p=DEFENCE;
-    else throw "ERROR IN READING COLOR";
-    init();
+    // string order;cin>>order;
+    // turn=order[0]=='B'?BLACK:WHITE;
+    // if(order[0]=='B')
+    //     turn=BLACK;
+    // else if(order[0]=='W')
+    //     turn=WHITE;
+    // else throw "ERROR IN READING COLOR";
+    // Position p;
+    // if(order[1]=='M')
+    //     p=MATE;
+    // else if(order[1]=='D')
+    //     p=DEFENCE;
+    // else throw "ERROR IN READING COLOR";
+    // init();
     // show_board();
-    show_ezterari(turn,p);    
+    // show_ezterari(turn,p);    
 }
-void Chess::show_ezterari(Color c,Position p)
+
+void Chess::graph_init()
+{
+    end = false;
+    this->cells.resize(8);
+    for (int row = 0; row < 8; row++)
+    {
+       this->cells[row].resize(8);
+        for (int column = 0; column < 8; column++)
+        {
+            cells[row][column].rect.setSize(sf::Vector2f(100, 100));
+            if ((column+row)%2)
+                cells[row][column].rect.setFillColor(sf::Color::Black);
+            else
+                cells[row][column].rect.setFillColor(sf::Color::White);
+
+            cells[row][column].rect.setPosition(get_cell_position(row, column));
+        }
+    }
+    turn=WHITE;
+    font.loadFromFile("texture/arial.ttf");
+    status_text.setFont(font);
+    status_text.setCharacterSize(30);
+    status_text.setStyle(sf::Text::Regular);
+    status_text.setFillColor(sf::Color::Black);
+    status_text.setPosition(840.f, 80.f);
+    update_status_text();
+}
+
+
+
+
+
+void Chess::run()
+{
+    graph_init();
+    window->display();
+    while (window->isOpen()) {
+        sf::Event event;
+
+        while (this->window->pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                this->window->close();
+            }
+            if (!this->end && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                this->mouse_clicked(sf::Mouse::getPosition(*(this->window)));
+            }
+        }
+        window->clear(sf::Color(150, 150, 150));
+        update_status_text();
+        draw();
+        window->display();
+    }
+}
+
+
+void Chess::cell_empty_clicked(int row, int column)
+{
+    // put_piece_in_cell(row, column);
+    // this->end = this->curr_user->check_win(this->cells);
+    // if (this->end)
+    //     return;
+    // change_turn();
+}
+
+void Chess::put_piece_in_cell(int row, int column)
+{
+    // XO* xo = new XO(this->curr_user->id);
+    // xo->sprite.setPosition(this->cells[row][column].rect.getPosition());
+    // this->cells[row][column].xo = xo;
+    // this->cells[row][column].cell_status = OCCUPIED;
+}
+
+
+void Chess::mouse_clicked(const sf::Vector2i& position)
+{   
+    int row = get_cell_index(position.y), column = get_cell_index(position.x);
+    if (row == -1 || column == -1)
+        return;
+    if (this->cells[row][column].cell_status == EMPTY)
+        this->cell_empty_clicked(row, column);
+}
+
+void Chess::update_status_text()
+{
+    string t;
+    t=(turn)? "Black":"White";
+    if (this->end)
+        status_text.setString(t + " Wins!");
+    else
+        status_text.setString("Turn:\n" + t );
+}
+
+void Chess::draw()
+{
+    for (int row = 0; row < 8; row++)
+        for (int column = 0; column < 8; column++)
+        {
+            this->window->draw(this->cells[row][column].rect);
+            // if (this->cells[row][column].cell_status == OCCUPIED)
+            //     this->window->draw(this->cells[row][column].xo->sprite);
+        }
+    this->window->draw(this->status_text);
+}
+
+
+
+
+
+
+
+void Chess::show_ezterari(Colour c,Position p)
 {
     vector<vector<Action>> y;
     vector<Action> o;
@@ -77,7 +188,7 @@ vector<Action> Chess::get_valid_actions_for_a_piece(Location from)
     }
     return valid_actions;
 }
-vector<Action> Chess::func2(Color c)
+vector<Action> Chess::func2(Colour c)
 {
     vector<Action> x;
     for(auto move:get_all_valid_moves(c))
@@ -97,7 +208,7 @@ vector<Action> Chess::func2(Color c)
     // cout<<x.size();
     return x;
 }
-vector<Action> Chess::func(Color c)
+vector<Action> Chess::func(Colour c)
 {
     vector<Action> x;
     for(auto move10:get_all_valid_moves(c))
@@ -125,7 +236,7 @@ vector<Action> Chess::func(Color c)
     }
     return x;
 }
-bool Chess::is_mate_possible(Color c)
+bool Chess::is_mate_possible(Colour c)
 {
     for(auto move:get_all_valid_moves(c))
     {
@@ -139,7 +250,7 @@ bool Chess::is_mate_possible(Color c)
     }
     return false;
 }
-bool Chess::is_not_mate_possible(Color c)
+bool Chess::is_not_mate_possible(Colour c)
 {
     for(auto move:get_all_valid_moves(c))
     {
@@ -153,10 +264,10 @@ bool Chess::is_not_mate_possible(Color c)
     }
     return false;
 }
-vector<Action> Chess::get_all_valid_moves(Color color)
+vector<Action> Chess::get_all_valid_moves(Colour colour)
 {
     vector<Action> valid_actions;
-    for(auto action:get_all_possible_moves(color))
+    for(auto action:get_all_possible_moves(colour))
         if(action_is_valid(action))
             valid_actions.push_back(action);
     return valid_actions;
@@ -164,7 +275,7 @@ vector<Action> Chess::get_all_valid_moves(Color color)
 bool Chess::action_is_valid(Action action)
 {
     do_action(action);
-    bool validation=is_check(get_piece(action.destination)->get_color())? false:true;
+    bool validation=is_check(get_piece(action.destination)->get_colour())? false:true;
     undo_action();
     return validation;
 }
@@ -190,12 +301,12 @@ vector<Location> Chess::get_valid_moves(Location location)
         throw "no piece";
     else if (m->get_name() == PAWN)
     {
-        int direction=m->get_color()==WHITE? 1:-1;
+        int direction=m->get_colour()==WHITE? 1:-1;
         Location forward(location.first,location.second+direction);
         if(is_in_board(forward) && is_free(forward))
         {
             valid_moves.push_back(forward);
-            if(location.second==(m->get_color()==WHITE?1:6))
+            if(location.second==(m->get_colour()==WHITE?1:6))
             {
                 Location forward2(location.first,location.second+2*direction);
                 if(is_in_board(forward2) && is_free(forward2))
@@ -253,14 +364,14 @@ vector<Location> Chess::get_valid_moves(Location location)
     }
     return valid_moves;
 }
-bool Chess::is_check(Color color)
+bool Chess::is_check(Colour colour)
 {
-    vector<Location> under_attack_fields=get_under_attack_fields(color);
-    return find(under_attack_fields.begin(),under_attack_fields.end(),get_king(color))!=under_attack_fields.end();;
+    vector<Location> under_attack_fields=get_under_attack_fields(colour);
+    return find(under_attack_fields.begin(),under_attack_fields.end(),get_king(colour))!=under_attack_fields.end();;
 }
-bool Chess::is_checkmate(Color color)
+bool Chess::is_checkmate(Colour colour)
 {
-    return get_all_valid_moves(color).size()==0 && is_check(color);
+    return get_all_valid_moves(colour).size()==0 && is_check(colour);
 }
 Action Chess::make_action_from_CL(string request)
 {
@@ -278,14 +389,14 @@ void Chess::put_piece(Piece * piece,Location location)
     board[location.first][location.second]=piece;
 }
 
-vector<Location> Chess::get_under_attack_fields(Color color)
+vector<Location> Chess::get_under_attack_fields(Colour colour)
 {
     vector<Location> under_attack_field;
-    for(auto action :get_all_possible_moves(color==WHITE?BLACK:WHITE))
+    for(auto action :get_all_possible_moves(colour==WHITE?BLACK:WHITE))
         under_attack_field.push_back(action.destination);
     return under_attack_field;
 }
-vector<Action> Chess::get_all_possible_moves(Color color)
+vector<Action> Chess::get_all_possible_moves(Colour colour)
 {
     vector<Action> accessable_moves;
     Location location;
@@ -296,7 +407,7 @@ vector<Action> Chess::get_all_possible_moves(Color color)
             if(!is_free(location))
             {
                 auto piece = get_piece(location);
-                if(piece->get_color()==color)
+                if(piece->get_colour()==colour)
                 {
                     for(auto move:get_valid_moves(location))
                     {
@@ -307,7 +418,7 @@ vector<Action> Chess::get_all_possible_moves(Color color)
         }
     return accessable_moves;
 }
-Location Chess::get_king(Color color)
+Location Chess::get_king(Colour colour)
 {
     Location l;
     for(int i=0;i<8;i++)
@@ -317,16 +428,16 @@ Location Chess::get_king(Color color)
             if(!is_free(l))
             {
                 auto piece = get_piece(l);
-                if(piece->get_name()==KING && piece->get_color()==color)
+                if(piece->get_name()==KING && piece->get_colour()==colour)
                     return l;
             }
         }
     throw "KING NOT FOUND";
     return l;
 }
-string Chess::color_generator(Piece* m)
+string Chess::colour_generator(Piece* m)
 {
-    return m->get_color()==WHITE? "W":"B";
+    return m->get_colour()==WHITE? "W":"B";
 }
 string Chess::name_generator(Piece* m)
 {
@@ -349,7 +460,7 @@ string Chess::name_generator(Piece* m)
 };
 string Chess::show_shortname(Piece* m)
 {
-    return name_generator(m)+color_generator(m);
+    return name_generator(m)+colour_generator(m);
 }
 void Chess::show_board()
 {
@@ -406,7 +517,7 @@ bool Chess::is_in_board(Location l)
 bool Chess::is_friend(Location me,Location target)
 {
     // cout<<turn<<'\t';
-    return get_piece(me)->get_color()==get_piece(target)->get_color();
+    return get_piece(me)->get_colour()==get_piece(target)->get_colour();
 }
 Piece* Chess::get_piece(Location l)
 {
@@ -441,19 +552,19 @@ void Chess::init()
                 board[i][7-j]=NULL;
             else
             {
-                Color color=(s[1]=='W'? WHITE:BLACK);
+                Colour colour=(s[1]=='W'? WHITE:BLACK);
                 if(s[0]=='P')
-                    board[i][7-j]=new Pawn(color);
+                    board[i][7-j]=new Pawn(colour);
                 else if(s[0]=='R')
-                    board[i][7-j]=new Rook(color);
+                    board[i][7-j]=new Rook(colour);
                 else if(s[0]=='N')
-                    board[i][7-j]=new Knight(color);
+                    board[i][7-j]=new Knight(colour);
                 else if(s[0]=='B')
-                    board[i][7-j]=new Bishop(color);
+                    board[i][7-j]=new Bishop(colour);
                 else if(s[0]=='Q')
-                    board[i][7-j]=new Queen(color);
+                    board[i][7-j]=new Queen(colour);
                 else if(s[0]=='K')
-                    board[i][7-j]=new King(color);
+                    board[i][7-j]=new King(colour);
                 else throw "ERROR IN READING MARBLE";
             }
         }

@@ -15,6 +15,7 @@ set(SOURCES
     ${SRC_DIRECTORY}/bishop.cpp
     ${SRC_DIRECTORY}/rook.cpp
     ${SRC_DIRECTORY}/pawn.cpp
+    ${SRC_DIRECTORY}/helper.cpp
 
 )
 
@@ -22,3 +23,11 @@ include_directories(${INCLUDE_DIRECTORY})
 add_executable(${PROJECT_NAME}
     ${SRC_DIRECTORY}/main.cpp
     ${SOURCES})
+
+    target_link_libraries(${PROJECT_NAME}
+    sfml-system
+    sfml-window
+    sfml-graphics)
+
+find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
+include_directories(${SFML_INCLUDE_DIRS})

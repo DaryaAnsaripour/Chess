@@ -3,12 +3,15 @@
 
 CMakeFiles/phase2.dir/src/bishop.cpp.o: headers/Console.h
 CMakeFiles/phase2.dir/src/bishop.cpp.o: headers/bishop.h
+CMakeFiles/phase2.dir/src/bishop.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/bishop.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/bishop.cpp.o: src/bishop.cpp
 
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/Console.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/bishop.h
+CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/cell.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/chessBoard.h
+CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/king.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/knight.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/pawn.h
@@ -17,19 +20,28 @@ CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/queen.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: headers/rook.h
 CMakeFiles/phase2.dir/src/chessBoard.cpp.o: src/chessBoard.cpp
 
+CMakeFiles/phase2.dir/src/helper.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/helper.cpp.o: headers/helper.h
+CMakeFiles/phase2.dir/src/helper.cpp.o: headers/piece.h
+CMakeFiles/phase2.dir/src/helper.cpp.o: src/helper.cpp
+
 CMakeFiles/phase2.dir/src/king.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/king.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/king.cpp.o: headers/king.h
 CMakeFiles/phase2.dir/src/king.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/king.cpp.o: src/king.cpp
 
 CMakeFiles/phase2.dir/src/knight.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/knight.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/knight.cpp.o: headers/knight.h
 CMakeFiles/phase2.dir/src/knight.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/knight.cpp.o: src/knight.cpp
 
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/Console.h
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/bishop.h
+CMakeFiles/phase2.dir/src/main.cpp.o: headers/cell.h
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/chessBoard.h
+CMakeFiles/phase2.dir/src/main.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/king.h
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/knight.h
 CMakeFiles/phase2.dir/src/main.cpp.o: headers/pawn.h
@@ -39,20 +51,24 @@ CMakeFiles/phase2.dir/src/main.cpp.o: headers/rook.h
 CMakeFiles/phase2.dir/src/main.cpp.o: src/main.cpp
 
 CMakeFiles/phase2.dir/src/pawn.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/pawn.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/pawn.cpp.o: headers/pawn.h
 CMakeFiles/phase2.dir/src/pawn.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/pawn.cpp.o: src/pawn.cpp
 
 CMakeFiles/phase2.dir/src/piece.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/piece.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/piece.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/piece.cpp.o: src/piece.cpp
 
 CMakeFiles/phase2.dir/src/queen.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/queen.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/queen.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/queen.cpp.o: headers/queen.h
 CMakeFiles/phase2.dir/src/queen.cpp.o: src/queen.cpp
 
 CMakeFiles/phase2.dir/src/rook.cpp.o: headers/Console.h
+CMakeFiles/phase2.dir/src/rook.cpp.o: headers/helper.h
 CMakeFiles/phase2.dir/src/rook.cpp.o: headers/piece.h
 CMakeFiles/phase2.dir/src/rook.cpp.o: headers/rook.h
 CMakeFiles/phase2.dir/src/rook.cpp.o: src/rook.cpp

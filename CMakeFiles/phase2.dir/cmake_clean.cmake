@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/phase2.dir/src/bishop.cpp.o"
   "CMakeFiles/phase2.dir/src/chessBoard.cpp.o"
+  "CMakeFiles/phase2.dir/src/helper.cpp.o"
   "CMakeFiles/phase2.dir/src/king.cpp.o"
   "CMakeFiles/phase2.dir/src/knight.cpp.o"
   "CMakeFiles/phase2.dir/src/main.cpp.o"

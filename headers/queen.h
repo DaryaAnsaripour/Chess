@@ -7,7 +7,9 @@ class Queen:public Piece
 {
 private:
 public:
-    Queen(Color);
+    Queen(Colour);
+    // sf::Sprite sprite;
+    void load_texture();
 };
 
 #endif
