@@ -14,8 +14,7 @@ public:
 
     Colour get_colour();
     string get_name();
-
-    
+    string get_piece_path();
 };
 
 

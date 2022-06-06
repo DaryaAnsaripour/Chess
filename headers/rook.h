@@ -8,8 +8,8 @@ class Rook:public Piece
 private:
 public:
     Rook(Colour);
-    //sf::Sprite sprite;
-   // sf::Texture texture;
+    sf::Sprite sprite;
+    sf::Texture texture;
     void load_texture();  
 };
 

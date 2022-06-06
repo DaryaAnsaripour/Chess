@@ -64,7 +64,7 @@ class Chess
     bool end;
 
     void graph_init();
-    // sf::Vector2f get_cell_position(int row,int column);
+    
     void update_status_text();
     void draw();
     void run();

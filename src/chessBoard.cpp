@@ -3,9 +3,16 @@
 Chess::Chess(sf::RenderWindow* _window) : window(_window), board(vector<vector<Piece *>>(EIGHT, vector<Piece *>(EIGHT, NULL)))
 {
     default_initiator();
-    for(int i=0; i<2; i++)
-        for(int j=0; j<8; j++)
-            cells[i][j].cell_status=OCCUPIED;
+    // for(int i=0; i<2; i++)
+    //     for(int j=0; j<8; j++)
+    //         this->cells[i][j].cell_status=OCCUPIED;
+    // for(int i=6; i<8; i++)
+    //     for(int j=0; j<8; j++)
+    //         this->cells[i][j].cell_status=OCCUPIED;
+    // for(int i=2; i<6; i++)
+    //     for(int j=0; j<8; j++)
+    //         this->cells[i][j].cell_status=OCCUPIED;
+    
     // string order;cin>>order;
     // turn=order[0]=='B'?BLACK:WHITE;
     // if(order[0]=='B')
@@ -123,7 +130,20 @@ void Chess::draw()
         {
             this->window->draw(this->cells[row][column].rect);
             if (this->cells[row][column].cell_status == OCCUPIED)
+            {
+                // string lte="texture/b_king.png";
+                // sf::Texture te;
+                // te.sf::Texture::loadFromFile(lte);
+                
+                // sf::Sprite sprite;
+                // sprite.sf::Sprite::setTexture(te);
+                // float piece_scale_x = 100.f / sprite.getTexture()->getSize().x;
+                // float piece_scale_y = 100.f / sprite.getTexture()->getSize().y;
+                // sprite.sf::Sprite::setScale(piece_scale_x, piece_scale_y);
+
+                // this->window->draw(sprite);
                 this->window->draw(this->board[row][column]->sprite);
+            }
         }
     this->window->draw(this->status_text);
 }

@@ -10,7 +10,7 @@ using namespace std;
 
 sf::Vector2f get_cell_position(int row,int column);
 
-string get_piece_path(Piece *piece);
+// string get_piece_path(Piece *piece);
 
 int get_cell_index(int x);
 

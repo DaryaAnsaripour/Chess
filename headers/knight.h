@@ -8,8 +8,8 @@ class Knight:public Piece
 private:
 public:
     Knight(Colour);
-    //sf::Sprite sprite;
-   // sf::Texture texture;
+    sf::Sprite sprite;
+    sf::Texture texture;
     void load_texture();
 };
 
