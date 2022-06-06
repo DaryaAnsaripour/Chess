@@ -6,12 +6,16 @@
 
 class Piece
 {
-protected:
+public:
     string name;
     Colour colour;
-public:
+    sf::Sprite sprite;
+    sf::Texture texture;
+
     Colour get_colour();
     string get_name();
+
+    
 };
 
 

@@ -2,6 +2,10 @@
 
 Chess::Chess(sf::RenderWindow* _window) : window(_window), board(vector<vector<Piece *>>(EIGHT, vector<Piece *>(EIGHT, NULL)))
 {
+    default_initiator();
+    for(int i=0; i<2; i++)
+        for(int j=0; j<8; j++)
+            cells[i][j].cell_status=OCCUPIED;
     // string order;cin>>order;
     // turn=order[0]=='B'?BLACK:WHITE;
     // if(order[0]=='B')
@@ -118,8 +122,8 @@ void Chess::draw()
         for (int column = 0; column < 8; column++)
         {
             this->window->draw(this->cells[row][column].rect);
-            // if (this->cells[row][column].cell_status == OCCUPIED)
-            //     this->window->draw(this->cells[row][column].xo->sprite);
+            if (this->cells[row][column].cell_status == OCCUPIED)
+                this->window->draw(this->board[row][column]->sprite);
         }
     this->window->draw(this->status_text);
 }

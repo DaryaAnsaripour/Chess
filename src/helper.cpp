@@ -8,13 +8,13 @@ sf::Vector2f get_cell_position(int row,int column)
         row * ( 100 ));
 }
 
-// string get_piece_path(Piece piece)
-// {
-//     string path = "texture/"; 
-//     path += ((piece.get_colour()== BLACK) ? "b_" : "w_");
-//     path +=(piece.get_name());
-//     return path + ".png";
-// }
+string get_piece_path(Piece *piece)
+{
+    string path = "texture/"; 
+    path += ((piece->get_colour()== BLACK) ? "b_" : "w_");
+    path +=(piece->get_name());
+    return path + ".png";
+}
 
 int get_cell_index(int x)
 {

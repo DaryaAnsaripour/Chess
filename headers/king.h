@@ -8,7 +8,8 @@ class King:public Piece
 private:
 public:
     King(Colour);
-    // sf::Sprite sprite;
+    //sf::Sprite sprite;
+   // sf::Texture texture;
     void load_texture();
 };
 
