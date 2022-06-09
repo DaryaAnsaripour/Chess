@@ -3,15 +3,6 @@
 Chess::Chess(sf::RenderWindow* _window) : window(_window), board(vector<vector<Piece *>>(EIGHT, vector<Piece *>(EIGHT, NULL)))
 {
     default_initiator();
-    // for(int i=0; i<2; i++)
-    //     for(int j=0; j<8; j++)
-    //         this->cells[i][j].cell_status=OCCUPIED;
-    // for(int i=6; i<8; i++)
-    //     for(int j=0; j<8; j++)
-    //         this->cells[i][j].cell_status=OCCUPIED;
-    // for(int i=2; i<6; i++)
-    //     for(int j=0; j<8; j++)
-    //         this->cells[i][j].cell_status=OCCUPIED;
     
     // string order;cin>>order;
     // turn=order[0]=='B'?BLACK:WHITE;
@@ -49,6 +40,15 @@ void Chess::graph_init()
             cells[row][column].rect.setPosition(get_cell_position(row, column));
         }
     }
+    for(int i=0; i<2; i++)
+        for(int j=0; j<8; j++)
+            cells[i][j].cell_status=OCCUPIED;
+    for(int i=6; i<8; i++)
+        for(int j=0; j<8; j++)
+            cells[i][j].cell_status=EMPTY;
+    for(int i=2; i<6; i++)
+        for(int j=0; j<8; j++)
+            cells[i][j].cell_status=OCCUPIED;
     turn=WHITE;
     font.loadFromFile("texture/arial.ttf");
     status_text.setFont(font);
@@ -125,6 +125,10 @@ void Chess::update_status_text()
 
 void Chess::draw()
 {
+    // sf::Texture test;
+    // test.loadFromFile("texture/b_bishop.png");
+    // cout<<this->board[0][0]->texture.getSize().x<<"\n";
+    // cout<<"salam";
     for (int row = 0; row < 8; row++)
         for (int column = 0; column < 8; column++)
         {
@@ -142,9 +146,14 @@ void Chess::draw()
                 // sprite.sf::Sprite::setScale(piece_scale_x, piece_scale_y);
 
                 // this->window->draw(sprite);
-                this->window->draw(this->board[row][column]->sprite);
+                // this->board[0][0]->sprite.setPosition(10,10);
+                // this->window->draw(this->board[1][0]->sprite);
+                cout<<board[row][column]->sprite.getTexture();
             }
         }
+    // test.loadFromFile("texture/b_bishop.png");
+    // this->board[0][0]->sprite.setTexture(test);
+    // this->window->draw(this->board[0][0]->sprite);
     this->window->draw(this->status_text);
 }
 
@@ -595,18 +604,18 @@ void Chess::init()
 }
 void Chess::default_initiator()
 {
-    turn=WHITE;
+    // turn=WHITE;
     for (int i = 0; i < EIGHT; i++)
     {
-        board[i][1]=new Pawn(WHITE);
-        board[i][6]=new Pawn(BLACK);
+        board[1][i]=new Pawn(WHITE);
+        board[6][i]=new Pawn(BLACK);
     }
-    board[0][0]=new Rook(WHITE);board[7][0]=new Rook(WHITE);
-    board[0][7]=new Rook(BLACK);board[7][7]=new Rook(BLACK);
-    board[1][0]=new Knight(WHITE);board[6][0]=new Knight(WHITE);
-    board[1][7]=new Knight(BLACK);board[6][7]=new Knight(BLACK);
-    board[2][0]=new Bishop(WHITE);board[5][0]=new Bishop(WHITE);
-    board[2][7]=new Bishop(BLACK);board[5][7]=new Bishop(BLACK);
-    board[3][0]=new Queen(WHITE);board[3][7]=new Queen(BLACK);
-    board[4][0]=new King(WHITE);board[4][7]=new King(BLACK);
+    board[0][0]=new Rook(WHITE);board[0][7]=new Rook(WHITE);
+    board[7][0]=new Rook(BLACK);board[7][7]=new Rook(BLACK);
+    board[0][1]=new Knight(WHITE);board[0][6]=new Knight(WHITE);
+    board[7][1]=new Knight(BLACK);board[7][6]=new Knight(BLACK);
+    board[0][2]=new Bishop(WHITE);board[0][5]=new Bishop(WHITE);
+    board[7][2]=new Bishop(BLACK);board[7][5]=new Bishop(BLACK);
+    board[0][3]=new Queen(WHITE);board[7][3]=new Queen(BLACK);
+    board[0][4]=new King(WHITE);board[7][4]=new King(BLACK);
 }

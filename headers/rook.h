@@ -10,7 +10,7 @@ public:
     Rook(Colour);
     sf::Sprite sprite;
     sf::Texture texture;
-    void load_texture();  
+    // void load_texture();  
 };
 
 #endif

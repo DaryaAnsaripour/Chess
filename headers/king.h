@@ -9,8 +9,8 @@ private:
 public:
     King(Colour);
     sf::Sprite sprite;
-   sf::Texture texture;
-    void load_texture();
+    sf::Texture texture;
+    // void load_texture();
 };
 
 #endif
