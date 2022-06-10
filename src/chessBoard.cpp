@@ -49,6 +49,13 @@ void Chess::graph_init()
     for(int i=2; i<6; i++)
         for(int j=0; j<8; j++)
             cells[i][j].cell_status=OCCUPIED;
+    // for(int i=0;i<8;i++){
+    //     for(int j=0;j<8;j++){
+    //         if(board[i][j])
+    //             board[i][j]->load_texture();
+    //     }
+    // }
+
     turn=WHITE;
     font.loadFromFile("texture/arial.ttf");
     status_text.setFont(font);
@@ -66,7 +73,8 @@ void Chess::graph_init()
 void Chess::run()
 {
     graph_init();
-    window->display();
+    this->window->setFramerateLimit(20);
+    // window->display();
     while (window->isOpen()) {
         sf::Event event;
 
@@ -125,35 +133,17 @@ void Chess::update_status_text()
 
 void Chess::draw()
 {
-    // sf::Texture test;
-    // test.loadFromFile("texture/b_bishop.png");
-    // cout<<this->board[0][0]->texture.getSize().x<<"\n";
-    // cout<<"salam";
+
     for (int row = 0; row < 8; row++)
         for (int column = 0; column < 8; column++)
         {
             this->window->draw(this->cells[row][column].rect);
-            if (this->cells[row][column].cell_status == OCCUPIED)
+            if (board[row][column])
             {
-                // string lte="texture/b_king.png";
-                // sf::Texture te;
-                // te.sf::Texture::loadFromFile(lte);
-                
-                // sf::Sprite sprite;
-                // sprite.sf::Sprite::setTexture(te);
-                // float piece_scale_x = 100.f / sprite.getTexture()->getSize().x;
-                // float piece_scale_y = 100.f / sprite.getTexture()->getSize().y;
-                // sprite.sf::Sprite::setScale(piece_scale_x, piece_scale_y);
-
-                // this->window->draw(sprite);
-                // this->board[0][0]->sprite.setPosition(10,10);
-                // this->window->draw(this->board[1][0]->sprite);
-                cout<<board[row][column]->sprite.getTexture();
+                this->board[row][column]->sprite.setPosition(column*100,row*100);
+                this->window->draw(board[row][column]->sprite);
             }
         }
-    // test.loadFromFile("texture/b_bishop.png");
-    // this->board[0][0]->sprite.setTexture(test);
-    // this->window->draw(this->board[0][0]->sprite);
     this->window->draw(this->status_text);
 }
 
